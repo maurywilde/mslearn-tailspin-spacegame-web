@@ -72,8 +72,8 @@ steps:
   condition: succeeded()
 
 schedules:
-- cron: "0 3 ** Mon-Fri"
-  displayName: Daily Build
+- cron: "0 3 * * Mon-Fri"
+  displayName: Daily build
   branches:
     include:
     - main
