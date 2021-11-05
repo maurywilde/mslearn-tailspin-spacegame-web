@@ -70,3 +70,10 @@ steps:
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact: drop'
   condition: succeeded()
+
+schedules:
+- cron: "0 3 ** Mon-Fri"
+  displayName: Daily Build
+  branches:
+    include:
+    - main
